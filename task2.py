@@ -1,6 +1,6 @@
 class Cafeteria:
     '''
-    Class made to initiate the cafeteria UI 
+    Class made to initiate the cafeteria UI
     '''
     def __init__(self):
         self.meal_sum = 0
@@ -10,7 +10,8 @@ class Cafeteria:
                 {'name': 'Vegetar', 'price': 52.50},
                 {'name': 'Halal', 'price': 59.90}
         )
-    def findmenuindex(self,item):
+
+    def findmenuindex(self, item):
         '''
         Finds the index of `item` if it exists in the menu, else returns `None`
 
@@ -18,7 +19,7 @@ class Cafeteria:
         ----------
             item `string`
                 Item to search for in the menu
-        
+
         Returns
         -------
             menuindex 
@@ -31,7 +32,7 @@ class Cafeteria:
                 return menuindex
             menuindex += 1
         return None 
-        
+
     def sell(self, meal):
         '''
         Tries to calculate sale of given user input if it exists on the menu
@@ -48,7 +49,7 @@ class Cafeteria:
             print(f"{meal.capitalize()}, here you go.\n")        
         else:
             print(f"{meal.capitalize()} is not on the menu!\n")
-                
+
     def empty_cash_registry(self):
         '''
         Clears the value of the current cash registry
@@ -63,7 +64,7 @@ class Cafeteria:
         while True:
             print("What would you like today? (type 'how is business?' to attempt small talk, or 'not hungry' to stop)")
             user_input = input("> ")
-            
+
             if user_input == 'how is business?':
                 if self.total_sum == 0:
                     print("Not good so far. No one seems to be hungry today!\n")
